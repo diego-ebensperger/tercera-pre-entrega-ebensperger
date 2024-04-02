@@ -1,0 +1,11 @@
+<!-- registro_alumno.html -->
+{% extends "base.html" %}  <!-- Asegúrate de tener una plantilla base -->
+
+{% block content %}
+<h2>Registro de Alumno</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button type="submit">Registrar</button>
+</form>
+{% endblock %}

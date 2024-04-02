@@ -1,0 +1,11 @@
+<!-- registro_profesor.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Registro de Profesor</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button type="submit">Registrar</button>
+</form>
+{% endblock %}

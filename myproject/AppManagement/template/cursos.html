@@ -1,0 +1,30 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <main class ="container"]>
+        <h3 class = "text-center"> CURSOS </h3>
+        <table class= "table">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>nombre</th>
+                    <th>camada</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for n in cursos %}
+                <tr>
+                    <td>{{n.id}}</td>
+                    <td>{{n.nombre}}</td>
+                    <td>{{n.camada}}</td>
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+        </table>
+
+{% endblock %}

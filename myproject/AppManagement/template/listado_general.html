@@ -1,0 +1,28 @@
+<!-- listado_general.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Listado General</h2>
+
+<h3>Alumnos</h3>
+<ul>
+    {% for alumno in elementos.alumnos %}
+    <li>{{ alumno.nombre }} {{ alumno.apellido }} - {{ alumno.email }}</li>
+    {% endfor %}
+</ul>
+
+<h3>Profesores</h3>
+<ul>
+    {% for profesor in elementos.profesores %}
+    <li>{{ profesor.nombre }} {{ profesor.apellido }} - {{ profesor.email }}</li>
+    {% endfor %}
+</ul>
+
+<h3>Cursos</h3>
+<ul>
+    {% for curso in elementos.cursos %}
+    <li>{{ curso.nombre }} - {{ curso.codigo }} - Profesor: {{ curso.profesor }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
