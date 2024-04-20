@@ -1,5 +1,10 @@
 from django import forms
 from .models import Alumno, Profesor, Curso
+from django import forms
+
+class SearchForm(forms.Form):
+    query = forms.CharField(label='Search')
+    
 class AlumnoForm(forms.ModelForm):
     class Meta:
         model = Alumno
